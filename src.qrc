@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/icon">
+        <file>image/lucky_block.png</file>
+        <file>image/lucky_block.ico</file>
+    </qresource>
+</RCC>
