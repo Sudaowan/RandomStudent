@@ -17,6 +17,9 @@ about::about(QWidget *parent)
     log = new ElaText();
     log->setTextSize(20);
     log->setText("更新日志:\n"
+                 "2024.06.29:忘了备份了……XP \n"
+                 "           所以又重新写了一遍……\n"
+                 "           更新了statistic页面和图标功能\n"
                  "2024.06.24:更新ini文件,更新了“允许重复”选项\n"
                  "2024.06.22:更新Setting界面,提供学生名单加密算法,更新About界面。\n"
                  "2024.06.21:更新基础UI界面和Random页面。\n");

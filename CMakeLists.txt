@@ -12,6 +12,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
 find_package(Qt6 COMPONENTS Network REQUIRED)
+find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets)
+find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets Charts)
 
 
 
@@ -35,6 +37,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
 
         settings.h settings.cpp
         about.h about.cpp
+        math_statistics.h math_statistics.cpp
 
     )
 # Define target properties for Android with Qt 6 as:
@@ -62,6 +65,8 @@ target_link_libraries(RandomStudent PRIVATE Qt${QT_VERSION_MAJOR}::Widgets
     ${CMAKE_CURRENT_SOURCE_DIR}/lib/elawidgettools.lib
 )
 target_link_libraries(RandomStudent PRIVATE Qt6::Network)
+target_link_libraries(RandomStudent PRIVATE Qt${QT_VERSION_MAJOR}::Widgets Qt${QT_VERSION_MAJOR}::Charts)
+
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
 # If you are developing for iOS or macOS you should consider setting an

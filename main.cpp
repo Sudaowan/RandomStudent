@@ -4,6 +4,7 @@
 #include "random_page.h"
 #include "settings.h"
 #include "about.h"
+#include "math_statistics.h"
 
 int main(int argc, char *argv[])
 {
@@ -15,6 +16,7 @@ int main(int argc, char *argv[])
     QIcon ico(":/icon/image/lucky_block.ico");
     w.setWindowIcon(ico);
 
+    w.setUserInfoCardPixmap((QPixmap)":/icon/image/lucky_block.png");
     w.setUserInfoCardTitle("By-Sudaowan");
     w.setUserInfoCardSubTitle("Email:Sudaowan@163.com");
 
@@ -25,6 +27,11 @@ int main(int argc, char *argv[])
     settings *set_page;
     set_page = new settings();
     w.addPageNode("Setting",set_page,ElaIconType::GearComplex);
+
+    QString statistics_key1;
+    w.addExpanderNode("Statistics",statistics_key1,ElaIconType::PenSwirl);
+    math_statistics *math_page = new math_statistics();
+    w.addPageNode("Math",math_page,statistics_key1,ElaIconType::CalculatorSimple);
 
     about *about_page;
     about_page = new about();

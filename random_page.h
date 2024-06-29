@@ -61,7 +61,7 @@ private slots:
     }
     void _update()
     {
-        QUrl url("https://www.baidu.com/");
+        QUrl url("https://github.com/Sudaowan/RandomStudent/releases/tag/v3.2.0");
         QDesktopServices::openUrl(url);
     }
 private:
